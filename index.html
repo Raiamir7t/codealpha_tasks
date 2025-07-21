@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Image Gallery</h1>
+
+    <div class="search-bar-wrapper">
+      <input type="text" id="search-bar" placeholder="Search category by name..." />
+      <!-- Removed search-message from right side of search bar -->
+    </div>
+    <div class="filter-buttons">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="nature">Nature</button>
+      <button data-filter="city">City</button>
+      <button data-filter="animals">Animals</button>
+    </div>
+    <div class="gallery-slider-row">
+      <button id="gallery-prev" class="gallery-nav-btn">❮</button>
+      <div class="gallery-wrapper">
+        <div class="gallery" id="gallery">
+          <!-- Image cards (example) -->
+          <div class="gallery-item nature"><img src="images/nature1.jpg" alt="Nature" /></div>
+          <div class="gallery-item nature"><img src="images/nature2.jpg" alt="Nature" /></div>
+          <div class="gallery-item city"><img src="images/city1.jpg" alt="City" /></div>
+          <div class="gallery-item city"><img src="images/city2.jpg" alt="City" /></div>
+          <div class="gallery-item animals"><img src="images/animal1.jpg" alt="Animal" /></div>
+          <div class="gallery-item animals"><img src="images/animal2.jpg" alt="Animal" /></div>
+        </div>
+        <div id="no-image-found" class="no-image-found"></div>
+      </div>
+      <button id="gallery-next" class="gallery-nav-btn">❯</button>
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-img" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
